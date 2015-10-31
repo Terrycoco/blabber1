@@ -3,6 +3,14 @@ body {
   color: #777;
 }
 
+#content {
+  max-width: 800px;
+  margin: 4em auto;
+  padding: 0 2em;
+  line-height: 1.5em;
+}
+
+
 ul {
   list-style: none;
   margin: 0;
