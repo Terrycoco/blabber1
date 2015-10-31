@@ -5,16 +5,17 @@ module.exports = React.createClass({
   getInitialState: function() {
     return { data: [] };  //empty array to start
   },
+
   componentDidMount: function() {
-    this.setState({ data:
-      [
-      {id: 2,
-      content: "and another fake blab"},
-      {id:1,
-      content: "this is a fake blab"}
-      ]
-    });
+   this.readBlabsFromAPI();
   },
+
+   readBlabsFromAPI: function() {
+     this.props.readFromAPI(this.props.origin + '/blabs', function(blabs) {
+       this.setState({data: blabs});
+     }.bind(this));
+   },
+
   render: function() {
     return (
       <div className="blabs-view">

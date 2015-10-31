@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-  class ApplicationController < ActionController::API
+
   before_action :allow_cross_origin_requests, if: proc { Rails.env.development? }
 
   def preflight
