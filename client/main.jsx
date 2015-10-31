@@ -1,4 +1,5 @@
 //require css files here
+require('./assets/app.css');
 
 //components
 var React = require('react');
