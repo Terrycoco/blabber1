@@ -1,4 +1,5 @@
 var React = require('react');
+var Blab = require('./Blab.jsx');
 
 module.exports = React.createClass({
   render: function () {
@@ -6,7 +7,7 @@ module.exports = React.createClass({
     //foreach (map) blab in the dataset
     var blabs = this.props.data.map(function(blab) {
       return (
-        <li>{blab.content}</li> //will be replaced with child
+        <Blab key={blab.id} content={blab.content}/>
       );
     });  //end blabs declaration
 
