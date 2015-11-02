@@ -2,8 +2,11 @@
 require('./assets/app.css');
 require('./assets/blabs.css');
 
-//components
+//react and routers
 var React = require('react');
-var App = require('./components/layout/App.jsx')
+var Router = require('react-router');
+var routes = require('./config/routes.jsx');
 
-React.render(<App/>, document.body);
+Router.run(routes, Router.HistoryLocation, function(Handler) {
+  React.render(<Handler/>, document.body);
+});
